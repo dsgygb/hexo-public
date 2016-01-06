@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="+++date = “2016-01-06T02:52:18+08:00”draft = truetitle = “hugo quick start”
++++
+通过本教程，你可以拥有一个使用hugo生成的github静态博客，发布内容后会自动把博客内容同步到研发团队博客，原理是利用github的钩子，服务器响应后生成团队博客。
+1.安装hugomac os：brew install hugo
+(如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/01/06/doc/hugo-quick-start/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="+++date = “2016-01-06T02:52:18+08:00”draft = truetitle = “hugo quick start”
++++
+通过本教程，你可以拥有一个使用hugo生成的github静态博客，发布内容后会自动把博客内容同步到研发团队博客，原理是利用github的钩子，服务器响应后生成团队博客。
+1.安装hugomac os：brew install hugo
+(如">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/d9f8fd81gw1ezp5ph9o1zj21ee0tbadw.jpg">
+<meta property="og:updated_time" content="2016-01-05T19:16:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="+++date = “2016-01-06T02:52:18+08:00”draft = truetitle = “hugo quick start”
++++
+通过本教程，你可以拥有一个使用hugo生成的github静态博客，发布内容后会自动把博客内容同步到研发团队博客，原理是利用github的钩子，服务器响应后生成团队博客。
+1.安装hugomac os：brew install hugo
+(如">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-doc/hugo-quick-start" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/06/doc/hugo-quick-start/" class="article-date">
+  <time datetime="2016-01-05T19:16:15.000Z" itemprop="datePublished">2016-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>+++<br>date = “2016-01-06T02:52:18+08:00”<br>draft = true<br>title = “hugo quick start”</p>
+<p>+++</p>
+<p>通过本教程，你可以拥有一个使用hugo生成的github静态博客，发布内容后会自动把博客内容同步到研发团队博客，原理是利用github的钩子，服务器响应后生成团队博客。</p>
+<h3 id="1-_u5B89_u88C5hugo"><a href="#1-_u5B89_u88C5hugo" class="headerlink" title="1.安装hugo"></a>1.安装hugo</h3><p>mac os：<code>brew install hugo</code></p>
+<p>(如果没有brew，参考官方教程 <a href="https://gohugo.io/tutorials/installing-on-mac/" target="_blank" rel="external">https://gohugo.io/tutorials/installing-on-mac/</a>)</p>
+<p>windows:直接下载最新版的exe文件安装即可，下载地址<a href="https://github.com/spf13/hugo/releases" target="_blank" rel="external">https://github.com/spf13/hugo/releases</a> ，可参考<a href="https://gohugo.io/tutorials/installing-on-windows/" target="_blank" rel="external">https://gohugo.io/tutorials/installing-on-windows/</a> 来配置环境变量</p>
+<p>[注意]以下内容以mac os为准，其他系统请举一反三，或者换一个mac ^_^</p>
+<h3 id="2-_u751F_u6210_u9759_u6001_u535A_u5BA2"><a href="#2-_u751F_u6210_u9759_u6001_u535A_u5BA2" class="headerlink" title="2.生成静态博客"></a>2.生成静态博客</h3><pre><code>hugo new site /path/to/site
+cd /path/to/site
+
+//安装一款主题
+mkdir themes
+cd themes
+git clone https://github.com/spf13/hyde.git
+
+//开始写文章吧
+cd ../
+hugo new hello-world.md
+
+//用你喜欢的markdown编辑器开始写文章吧。
+ //编辑好并保存之后
+ hugo server -t=hyde -D
+</code></pre><p>到这里，你的博客就可以在本地跑起来了，访问<code>http://127.0.0.1:1313/</code>你可以看到下图的内容：<br><img src="http://ww4.sinaimg.cn/large/d9f8fd81gw1ezp5ph9o1zj21ee0tbadw.jpg" alt=""><br>其中<code>content</code>文件夹存放你的原始文档，<code>public</code>存放生成的html静态文档，你可以把public的静态文档放在任何可以存放静态文档的地方来供别人访问。</p>
+<h3 id="3-_u5229_u7528github_u8FDB_u884C_u6258_u7BA1"><a href="#3-_u5229_u7528github_u8FDB_u884C_u6258_u7BA1" class="headerlink" title="3.利用github进行托管"></a>3.利用github进行托管</h3><pre><code>//进入blog主目录
+cd /path/to/site
+
+//创建.gitignore文件，随后写入 public/ ,保存。
+vi .gitignore
+
+git init
+git add .
+git commit -m &apos;for init blog&apos;
+
+//登录github账户，直接创建两个分支，名为blog-src,username.github.io 
+//(username为你在github的用户名，下同)，不需要初始化
+git remote add origin git@github.com:username/blog-src.git
+git push -u origin master
+
+//配置博客,把`baseurl`的值设置为http:/dsgygb.github.io/&quot;，保存
+vi config.toml
+
+//重新生成静态博客
+hugo -t=hyde -D
+
+//上传public内的文件到username.github.io项目
+cd public
+git init
+git add .
+git commit -m &apos;for init blog&apos;
+git remote add origin git@github.com:username/username.github.io.git
+git push -u origin master
+</code></pre><p>到这里，你自己的博客在github上的托管已全部完成，一般来说，过一会儿（不超过10分钟），你就可以用：<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 来访问你的博客了。</p>
+<h3 id="4-_u8BBE_u7F6E_u94A9_u5B50_uFF0C_u89E6_u53D1_u56E2_u961F_u535A_u5BA2_u81EA_u52A8_u90E8_u7F72"><a href="#4-_u8BBE_u7F6E_u94A9_u5B50_uFF0C_u89E6_u53D1_u56E2_u961F_u535A_u5BA2_u81EA_u52A8_u90E8_u7F72" class="headerlink" title="4.设置钩子，触发团队博客自动部署"></a>4.设置钩子，触发团队博客自动部署</h3><p>最后，我们设置钩子，让你的文章自动同步到团队的博客里。<br>在网页版github，进入<code>blog-src</code>项目的<code>setting</code>页面，选择<code>Webhooks &amp; services</code>,点击<code>Add webhook</code>，<code>Payload URL</code>输入<code>http://hook.fyscu.com/blog</code>,其他的表单都是默认，点击<code>Add webhook</code>,ok,大功告成，之后在你push内容的时候，就会同步在团队博客上了。</p>
+<h3 id="5-_u4F7F_u7528_u811A_u672C_u4E00_u952E_u90E8_u7F72"><a href="#5-_u4F7F_u7528_u811A_u672C_u4E00_u952E_u90E8_u7F72" class="headerlink" title="5.使用脚本一键部署"></a>5.使用脚本一键部署</h3><p>每次输入那么多命令，烦不烦啊，所以有了这个一键部署的脚本，这样，写完文章后，只需执行一个命令即可发布在2个博客了。复制以下内容到<code>blog-src</code>目录下的<code>deploy.sh</code></p>
+<pre><code>#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+then msg=&quot;$1&quot;
+fi
+
+hugo -t=hyde -D
+git add -A
+git commit -m &quot;$msg&quot;
+git push -u origin master
+
+cd public
+git add -A
+git commit -m &quot;$msg&quot;
+git push --force -u origin master
+
+cd ../
+</code></pre><p>继续：</p>
+<pre><code>//复制以上脚本内容到deploy.sh
+vi deploy.sh
+
+//给脚本文件可执行权限
+chmod +x deploy.sh
+
+//再写一篇文章呗
+hugo new doc/hugo-quick-start.md
+
+//写完保存后，执行一键部署
+./deploy.sh
+</code></pre><p>至此，你的博文已经发布在你的个人博客与团队博客了。（可能会有一点点延迟）</p>
+<p>demo参见我的博客与团队博客：</p>
+<ul>
+<li><a href="http://dsgygb.github.io" target="_blank" rel="external">http://dsgygb.github.io</a></li>
+<li><a href="http://fyyflab.gitcafe.io" target="_blank" rel="external">http://fyyflab.gitcafe.io</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/01/06/doc/hugo-quick-start/" data-id="cij2l44ng00000y9592l39jve" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/06/hello-world-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hello-world
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/01/06/test-quick/">test-quick</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/06/hello-world-md/">hello-world.md</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/06/hello-world-2/">hello-world</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/06/hello-world-1/">hello-world</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/06/doc/hugo-quick-start/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
